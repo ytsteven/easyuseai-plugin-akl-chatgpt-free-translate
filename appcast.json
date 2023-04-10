@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-chatgpt-free-translate",
   "versions": [
     {
+      "version": "0.0.1",
+      "desc": "update",
+      "sha256": "574f19435b0f2a520a86dfdfd4faac7a383d3d8aae4703ee72edecfebc7b843e",
+      "url": "https://github.com/ytsteven/easyuseai-plugin-akl-chatgpt-free-translate/releases/download/v0.0.1/easyuseai-plugin-akl-chatgpt-free-translate_v0.0.1.aiplugin",
+      "minBobVersion": "0.4.3"
+    },
+    {
       "version": "0.1.7",
       "desc": "修复正式版和beta版过期的问题",
       "sha256": "d2102642849e4c77b344e59a5b0b4ee9b1e978c2657231309be73f9abbdb295e",
