@@ -16,7 +16,7 @@ jobs:
         uses: battila7/get-version-action@v2
 
       - name: Package plugin
-        run: mkdir release && zip -j -r release/bob-plugin-akl-chatgpt-free-translate.bobplugin ./src/*
+        run: mkdir release && zip -j -r release/easyuseai-plugin-akl-chatgpt-free-translate.aiplugin ./src/*
 
       - name: Get last commit title
         id: last-commit
@@ -31,7 +31,7 @@ jobs:
           echo "version=$output" >> $GITHUB_OUTPUT
 
       - name: Package plugin final
-        run: mv release/bob-plugin-akl-chatgpt-free-translate.bobplugin release/bob-plugin-akl-chatgpt-free-translate_${{ steps.run_script.outputs.version }}.bobplugin
+        run: mv release/easyuseai-plugin-akl-chatgpt-free-translate.aiplugin release/easyuseai-plugin-akl-chatgpt-free-translate_${{ steps.run_script.outputs.version }}.aiplugin
 
       - name: Commit files
         run: |
@@ -49,8 +49,8 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: release/bob-plugin-akl-chatgpt-free-translate_${{ steps.run_script.outputs.version }}.bobplugin
-          asset_name: bob-plugin-akl-chatgpt-free-translate_${{ steps.run_script.outputs.version }}.bobplugin
+          file: release/easyuseai-plugin-akl-chatgpt-free-translate_${{ steps.run_script.outputs.version }}.aiplugin
+          asset_name: easyuseai-plugin-akl-chatgpt-free-translate_${{ steps.run_script.outputs.version }}.aiplugin
           tag: ${{ steps.run_script.outputs.version }}
           overwrite: true
           body: "${{ steps.last-commit.outputs.last_commit_title }}"
