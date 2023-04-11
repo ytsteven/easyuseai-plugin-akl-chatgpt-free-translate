@@ -1,4 +1,4 @@
-# 正在迁移到[易用AI](https://easyuseai.com/)，进行中...
+# 已经迁移到易用AI，可下载[易用AI插件](https://github.com/ytsteven/easyuseai-plugin-akl-chatgpt-free-translate/releases)(.aiplugin)使用
 
 # bob-plugin-akl-chatgpt-free-translate
 **免费使用OpenAI ChatGPT;无需apiKey;无需账号密码;无需启动服务;**
