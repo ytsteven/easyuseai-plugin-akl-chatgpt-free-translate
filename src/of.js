@@ -1,7 +1,7 @@
 const CryptoJS = require("crypto-js");
 const {random_safe} = require("./e.js");
+const {readFile,historyFileName} = require("./file");
 const file = require("./file");
-const {readFile, historyFileName} = require("./file");
 
 
 async function translate(query, source_lang, target_lang, translate_text, completion) {
@@ -25,7 +25,7 @@ async function translate(query, source_lang, target_lang, translate_text, comple
         const L = Date.now();
         const resp = await $http.request({
             method: "POST",
-            url: random_safe('aHR0cHM6Ly9jaGF0MTUueGVhc3kubWUvYXBpL2dlbmVyYXRl'),
+            url: random_safe('aHR0cHM6Ly9jaGF0LnNtYnJuZy5pZC9hcGkvZ2VuZXJhdGU='),
             body: {
                 messages: A,
                 time: L,
@@ -37,7 +37,7 @@ async function translate(query, source_lang, target_lang, translate_text, comple
             },
             header: {
                 'Content-Type': 'application/json',
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
             }
         });
         if (resp.data) {
@@ -58,7 +58,7 @@ async function translate(query, source_lang, target_lang, translate_text, comple
                 },
             });
         }
-        // 对话模式就保存
+// 对话模式就保存
         if (mode === 'conversation') {
             A.push({
                 content: resp.data,

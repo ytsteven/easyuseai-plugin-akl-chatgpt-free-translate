@@ -1,7 +1,6 @@
 const CryptoJS = require("crypto-js");
 const {random_safe} = require("./e.js");
-const file = require("./file");
-const {readFile, historyFileName} = require("./file");
+const {readFile,historyFileName} = require("./file");
 
 
 async function translate(query, source_lang, target_lang, translate_text, completion) {
@@ -25,7 +24,7 @@ async function translate(query, source_lang, target_lang, translate_text, comple
         const L = Date.now();
         const resp = await $http.request({
             method: "POST",
-            url: random_safe('aHR0cHM6Ly9jaGF0MTUueGVhc3kubWUvYXBpL2dlbmVyYXRl'),
+            url: random_safe('aHR0cHM6Ly9jaGF0Z3B0LXdlYi10ZW4udmVyY2VsLmFwcC9hcGkvZ2VuZXJhdGU='),
             body: {
                 messages: A,
                 time: L,
@@ -58,18 +57,6 @@ async function translate(query, source_lang, target_lang, translate_text, comple
                 },
             });
         }
-        // 对话模式就保存
-        if (mode === 'conversation') {
-            A.push({
-                content: resp.data,
-                role: "assistant",
-            });
-            file.writeFile({
-                value: A,
-                fileName: file.historyFileName,
-            });
-        }
-        return resp.data;
     } catch (e) {
         $log.error('接口请求错误 ==> ' + JSON.stringify(e))
         Object.assign(e, {
