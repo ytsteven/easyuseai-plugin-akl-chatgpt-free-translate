@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-chatgpt-free-translate",
   "versions": [
     {
+      "version": "0.0.3",
+      "desc": "Merge branch 'main' of https://github.com/ytsteven/easyuseai-plugin-akl-chatgpt-free-translate",
+      "sha256": "3b512a8dcb5321862030c84de0f96e5ae0f9ba21b2b67c24b0f4fd84799f9288",
+      "url": "https://github.com/ytsteven/easyuseai-plugin-akl-chatgpt-free-translate/releases/download/v0.0.3/easyuseai-plugin-akl-chatgpt-free-translate_v0.0.3.aiplugin",
+      "minBobVersion": "0.4.3"
+    },
+    {
       "version": "0.0.2",
       "desc": "Merge branch 'main' of https://github.com/ytsteven/easyuseai-plugin-akl-chatgpt-free-translate",
       "sha256": "1fc2b58fc635bdbe554ad7940c8d078b26e55258ea19de56acd95a6fa7b4eaf5",
